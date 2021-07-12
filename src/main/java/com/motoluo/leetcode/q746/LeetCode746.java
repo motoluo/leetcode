@@ -14,6 +14,10 @@ public class LeetCode746 {
      * 输入：cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
      * 输出：6
      * 解释：最低花费方式是从 cost[0] 开始，逐个经过那些 1 ，跳过 cost[3] ，一共花费 6 。
+     * <p>
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/min-cost-climbing-stairs
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      *
      * @param args
      */
@@ -27,6 +31,7 @@ public class LeetCode746 {
     }
 
     /**
+     * 动态规划
      * 思路：每一步可走1阶或2阶，每一步都取2阶中最小花费，加和起来肯定是最小花费
      *
      * @param cost
@@ -34,8 +39,13 @@ public class LeetCode746 {
      * @return
      */
     public static int dp(int[] cost, int start) {
-        // 第一步花费
-        int r = cost[start];
+        // 第一步花费（注意边界值：start取值0或1，cost的length可能为1）
+        int r = 0;
+        if (start < cost.length) {
+            r = cost[start];
+        } else {
+            r = cost[0];
+        }
         // 后续每步花费
         for (int i = start + 1; i < cost.length; ) {
             if (i + 1 >= cost.length) {
@@ -55,6 +65,7 @@ public class LeetCode746 {
     }
 
     /**
+     * 动态规划
      * 思路：第n步花费 = 最后一步为1阶、2阶花费的最小值
      *
      * @param cost
@@ -64,7 +75,7 @@ public class LeetCode746 {
         int n = cost.length;
         // 花费的结果
         int[] dp = new int[n + 1];
-        // 第一步花费
+        // 可以选择从下标为 0 或 1 的元素作为初始阶梯
         dp[0] = dp[1] = 0;
         // 第n步花费 = 最后一步为1阶、2阶花费的最小值
         for (int i = 2; i <= n; i++) {
