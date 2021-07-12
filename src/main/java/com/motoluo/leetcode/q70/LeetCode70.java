@@ -13,6 +13,7 @@ public class LeetCode70 {
         int n = 5;
         System.out.println(dp(n));
         System.out.println(recursion(n));
+        System.out.println(mRecursion(n));
     }
 
     /**
@@ -31,15 +32,30 @@ public class LeetCode70 {
     }
 
     /**
-     * 记忆化递归 todo
+     * 记忆化递归
      * 1-5级例子找规律：1，2，3，5，8
      * 得出斐波那契数列 f(x) = f(x-1) + f(x-2)
      *
      * @param n
      * @return
      */
+    public static int[] arr;
+
     public static int mRecursion(int n) {
-        return 0;
+        arr = new int[n + 1];
+        return helper(n, arr);
+    }
+
+    public static int helper(int n, int[] arr) {
+        if (arr[n] > 0) {
+            return arr[n];
+        }
+        if (n <= 2) {
+            arr[n] = n;
+            return arr[n];
+        }
+        arr[n] = helper(n - 1, arr) + helper(n - 2, arr);
+        return arr[n];
     }
 
     /**
