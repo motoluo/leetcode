@@ -37,20 +37,16 @@ public class LeetCode45 {
      * @return
      */
     public static int dp(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
+        // cur=当前次跳最远值，next=下次跳最远值
+        int cur = 0, next = 0, step = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            next = Math.max(next, nums[i] + i);
+            // 到达当前次最大值后，step++并进入下次跳
+            if (i == cur) {
+                cur = next;
+                step++;
+            }
         }
-        int max = 0, step = 0;
-//        for (int i = 0; i < nums.length; i++) {
-//            if (max >= nums.length) {
-//                return step;
-//            }
-//            if (i < max) {
-//                continue;
-//            }
-//            max = Math.max(i + nums[i], max);
-//            step++;
-//        }
         return step;
     }
 
