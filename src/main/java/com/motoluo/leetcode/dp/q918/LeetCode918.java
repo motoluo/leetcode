@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.q918;
+package com.motoluo.leetcode.dp.q918;
 
 public class LeetCode918 {
 

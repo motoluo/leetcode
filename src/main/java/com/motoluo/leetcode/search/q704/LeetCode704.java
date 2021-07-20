@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.q704;
+package com.motoluo.leetcode.search.q704;
 
 public class LeetCode704 {
 

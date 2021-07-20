@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.q55;
+package com.motoluo.leetcode.dp.q55;
 
 public class LeetCode55 {
 

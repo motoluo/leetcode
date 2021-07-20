@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.q53;
+package com.motoluo.leetcode.dp.q53;
 
 import java.util.Arrays;
 
