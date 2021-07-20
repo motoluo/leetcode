@@ -73,16 +73,17 @@ public class LeetCode704 {
      * @return
      */
     public static int binarySearch(int[] nums, int target) {
-        int left = 0, right = nums.length - 1, avg = 0;
+        int left = 0, mid = 0, right = nums.length - 1;
         while (left <= right) {
-            avg = (left + right) / 2;
-            if (nums[avg] == target) {
-                return avg;
+            // 此处不用 mid = (left + right) / 2; 防止int溢出
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
             }
-            if (nums[avg] < target) {
-                left = avg + 1;
+            if (nums[mid] < target) {
+                left = mid + 1;
             } else {
-                right = avg - 1;
+                right = mid - 1;
             }
         }
         return -1;
