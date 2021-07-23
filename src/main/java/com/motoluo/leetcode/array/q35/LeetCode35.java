@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.search.q35;
+package com.motoluo.leetcode.array.q35;
 
 public class LeetCode35 {
 

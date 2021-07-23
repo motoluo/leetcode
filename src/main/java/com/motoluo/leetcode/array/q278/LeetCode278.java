@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.search.q278;
+package com.motoluo.leetcode.array.q278;
 
 public class LeetCode278 {
 

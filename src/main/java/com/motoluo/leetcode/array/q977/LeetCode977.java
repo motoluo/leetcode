@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.search.q977;
+package com.motoluo.leetcode.array.q977;
 
 import java.util.Arrays;
 
