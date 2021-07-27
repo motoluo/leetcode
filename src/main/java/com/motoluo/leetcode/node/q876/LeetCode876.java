@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.array.q876;
+package com.motoluo.leetcode.node.q876;
 
 public class LeetCode876 {
 
@@ -28,9 +28,10 @@ public class LeetCode876 {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5};
         ListNode head = ListNode.buildHead(nums);
-        System.out.println(middleNode(head));
         int[] nums2 = {1, 2, 3, 4, 5, 6};
         ListNode head2 = ListNode.buildHead(nums2);
+
+        System.out.println(middleNode(head));
         System.out.println(middleNode(head2));
 
         System.out.println(slowFastPointer(head));
