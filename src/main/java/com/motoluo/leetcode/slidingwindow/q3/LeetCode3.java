@@ -1,4 +1,4 @@
-package com.motoluo.leetcode.array.q3;
+package com.motoluo.leetcode.slidingwindow.q3;
 
 import java.util.HashMap;
 
@@ -42,7 +42,8 @@ public class LeetCode3 {
     }
 
     /**
-     * 暴力法
+     * 滑动窗口
+     * 思路：从左至右，首尾两个元素相同时，为一个窗口，记录长度最大值
      *
      * @param s
      * @return
