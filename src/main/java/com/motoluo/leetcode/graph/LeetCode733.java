@@ -81,7 +81,7 @@ public class LeetCode733 {
     }
 
     /**
-     * 深度优先（BFS）
+     * 深度优先（DFS）
      *
      * @param image
      * @param sr
@@ -103,7 +103,7 @@ public class LeetCode733 {
             image[sr][sc] = newColor;
             for (int i = 0; i < 4; i++) {
                 int mx = sr + dx[i], my = sc + dy[i];
-                if (mx < image.length && mx > 0 && my < image[0].length && my >= 0 && image[mx][my] == color) {
+                if (mx < image.length && mx >= 0 && my < image[0].length && my >= 0 && image[mx][my] == color) {
                     s(image, mx, my, color, newColor);
                 }
             }
