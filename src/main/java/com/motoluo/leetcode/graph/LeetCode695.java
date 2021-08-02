@@ -135,6 +135,7 @@ public class LeetCode695 {
                     continue;
                 }
                 int count = 0;
+                // 单源点
                 queue.offer(new int[]{i, j});
                 image[i][j] = 0;
                 while (!queue.isEmpty()) {
